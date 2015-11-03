@@ -1,0 +1,63 @@
+/***************************
+Name: Himanshu Kamboj
+Roll no: B1230
+Branch: C.S.E
+Year: 4th year
+Date: Nov 3,2015
+**************************/
+
+1)
+Debian always has at least three releases in active maintenance: "Stable", "Testing" and "Unstable".
+
+Stable:-
+
+    The "stable" distribution contains the latest officially released distribution of Debian.
+
+    This is the production release of Debian, the one which we primarily recommend using.
+
+    The current "stable" distribution of Debian is version 8, codenamed jessie. It was initially released as version 8 on April 25th, 2015 and its latest update, version 8.2, was released on September 5th, 2015.
+
+Testing:-
+
+    The "testing" distribution contains packages that haven't been accepted into a "stable" release yet, but they are in the queue for that. The main advantage of using this distribution is that it has more recent versions of software.
+
+    See the Debian FAQ for more information on what is "testing" and how it becomes "stable".
+
+    The current "testing" distribution is stretch.
+
+Unstable:-
+
+    The "unstable" distribution is where active development of Debian occurs. Generally, this distribution is run by developers and those who like to live on the edge.
+
+    The "unstable" distribution is called sid.
+
+2)
+Use apt-cache pkgnames instead of apt-get pkgnames(as it is not working) to see how many packages are available to install.
+bone$ apt­-cache pkgnames | sort > /home/debian/pkg0.txt
+bone$ wc /home/debian/pkg0.txt
+36556  36556 587886 /home/debian/a.txt
+shows 36556 lines and 36556 packages are available to install.
+
+3)
+Install htop and find what version was installed
+
+bone$ apt-get install htop
+bone$ htop -v
+htop 1.0.1 - (C) 2004-2011 Hisham Muhammad
+Released under the GNU GPL.
+
+4)
+bone$ echo "deb http://ftp.us.debian.org/debian/ wheezy-backports main" > /etc/apt/sources.list.d/wheezy-backports.list
+bone$ echo "deb http://ftp.us.debian.org/debian/ jessiemain contribnon-free" > /etc/apt/sources.list.d/jessie.list
+bone$ apt-get update
+
+5)
+bone$ apt­-cache pkgnames | sort > /home/debian/pkg1.txt
+bone$ wc /home/debian/pkg1.txt
+38520  38520 628590 /home/debian/pkg1.txt
+shows 38520 lines and 38520 packages are available to install.
+
+
+6)
+Install the Jessie release of  htop and find what version was installed.
+htop version 1.0.3-1 
